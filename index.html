@@ -3,26 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Music Player</title>
+  <title>Advanced Music Player</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <div class="player-container">
-    <h2 id="song-title">My Awesome Track</h2>
+    <img id="cover-art" src="" alt="Album Cover">
+    <h2 id="song-title">Loading...</h2>
+    <h4 id="song-artist">Loading...</h4>
     
-    <audio id="audio-element" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
-
-    <div class="controls">
-      <button id="play-btn">Play</button>
-      <button id="pause-btn">Pause</button>
-    </div>
+    <audio id="audio-element"></audio>
 
     <div class="progress-container">
       <input type="range" id="progress-bar" value="0" max="100">
       <div class="time-display">
         <span id="current-time">0:00</span> / <span id="duration">0:00</span>
       </div>
+    </div>
+
+    <div class="controls">
+      <button id="prev-btn">Prev</button>
+      <button id="play-btn">Play</button>
+      <button id="next-btn">Next</button>
+    </div>
+
+    <div class="volume-container">
+      <label for="volume-bar">Vol: </label>
+      <input type="range" id="volume-bar" value="100" max="100">
+    </div>
+
+    <hr>
+
+    <div class="playlist-container">
+      <h3>Up Next</h3>
+      <ul id="playlist">
+        </ul>
     </div>
   </div>
 
